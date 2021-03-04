@@ -2,7 +2,7 @@
 
 namespace Tap2021Demo.Console
 {
-    public abstract class Account
+    public abstract class Account : IAccount
     {
         public decimal Balance { get; private set; }
 
