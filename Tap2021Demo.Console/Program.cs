@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Tap2021Demo.Console
+﻿namespace Tap2021Demo.Console
 {
     class Program
     {
@@ -8,21 +6,17 @@ namespace Tap2021Demo.Console
 
         static void Main(string[] args)
         {
+
+            //Prepare
             var account = new SavingsAccount();
             account.Deposit(200);
+            var card = new Card("Andrei Ionut");
+            card.AddAcount(account);
 
-            System.Console.WriteLine($"Disponibil: {account.Balance} RON");
-
-            try
-            {
-                account.Withdraw(100);
-
-            }
-            catch (InvalidOperationException)
-            {
-                System.Console.WriteLine("Fonduri insuficiente!");
-            }
-            System.Console.WriteLine($"Disponibil: {account.Balance} RON");
+            // Withdraw from ATM
+            Atm.Instance.Insert(card);
+            Atm.Instance.SelectAccount(account);
+            Atm.Instance.Withdraw(100);
         }
     }
 }
