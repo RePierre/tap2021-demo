@@ -6,16 +6,7 @@
 
         static void Main(string[] args)
         {
-
-            //Prepare
-            var account = new SavingsAccount();
-            account.Deposit(200);
-            var card = new Card("Andrei Ionut");
-            card.AddAcount(account);
-
-            // Withdraw from ATM
-            Atm.Instance.Insert(card);
-            Atm.Instance.SelectAccount(account);
+            Atm.Instance.Start();
             Atm.Instance.Withdraw(100);
         }
     }

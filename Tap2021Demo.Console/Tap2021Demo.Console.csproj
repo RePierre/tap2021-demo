@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Tap2021Demo.DomainEntities\Tap2021Demo.DomainEntities.csproj" />
+  </ItemGroup>
+
 </Project>

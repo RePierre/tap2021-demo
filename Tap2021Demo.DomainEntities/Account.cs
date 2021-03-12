@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tap2021Demo.Console
+namespace Tap2021Demo.DomainEntities
 {
     public abstract class Account : IAccount
     {

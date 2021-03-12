@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Tap2021Demo.DomainEntities;
 
 namespace Tap2021Demo.Console
 {
@@ -25,9 +26,16 @@ namespace Tap2021Demo.Console
             }
         }
 
-        public void Insert(Card card)
+        public void Start()
         {
+            //Prepare
+            var account = new SavingsAccount();
+            account.Deposit(200);
+            var card = new Card("Andrei Ionut");
+            card.AddAcount(account);
+
             _card = card;
+            this.SelectAccount(account);
         }
 
         public void SelectAccount(Account account)

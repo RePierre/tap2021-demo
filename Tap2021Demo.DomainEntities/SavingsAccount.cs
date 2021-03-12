@@ -1,4 +1,4 @@
-﻿namespace Tap2021Demo.Console
+﻿namespace Tap2021Demo.DomainEntities
 {
     public class SavingsAccount : Account
     {
