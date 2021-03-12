@@ -2,8 +2,6 @@
 {
     class Program
     {
-        private const int Amount = 500;
-
         static void Main(string[] args)
         {
             Atm.Instance.Start();
