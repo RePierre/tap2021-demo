@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="26.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Tap2021Demo.DomainEntities\Tap2021Demo.DomainEntities.csproj" />
   </ItemGroup>
 
