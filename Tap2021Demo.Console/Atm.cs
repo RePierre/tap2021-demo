@@ -7,7 +7,7 @@ namespace Tap2021Demo.Console
     {
         private static Atm _instance;
         private Card _card;
-        private Account _account;
+        private WithdrawableAccount _account;
 
         private Atm()
         {
@@ -29,7 +29,7 @@ namespace Tap2021Demo.Console
         public void Start()
         {
             //Prepare
-            var account = new SavingsAccount();
+            var account = new SavingsAccount(string.Empty, 0m, new AccountHolder(string.Empty, string.Empty, string.Empty));
             account.Deposit(200);
             var card = new Card("Andrei Ionut");
             card.AddAcount(account);
@@ -38,17 +38,25 @@ namespace Tap2021Demo.Console
             this.SelectAccount(account);
         }
 
-        public void SelectAccount(Account account)
+        public void SelectAccount(WithdrawableAccount account)
         {
             var acc = _card.Accounts.Single(a => a == account);
-
             _account = acc;
         }
 
+        class DummyAmountCalculator : IWithdrawalAmountCalculator
+        {
+            public new decimal CalculateWithdrawalAmount(decimal amount, decimal withdrawalCommissionPercent)
+            {
+                return amount;
+            }
+        }
 
         public void Withdraw(decimal amount)
         {
+            _account.AmountCalculator = new DummyAmountCalculator();
             _account.Withdraw(amount);
+
             System.Console.WriteLine($"Amount {amount} was withdrawn from the account");
             System.Console.WriteLine($"Remaining: {_account.Balance}");
         }

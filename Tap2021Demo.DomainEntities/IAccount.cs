@@ -9,7 +9,5 @@
         decimal Balance { get; }
 
         void Deposit(decimal amount);
-
-        decimal Withdraw(decimal amount);
     }
 }

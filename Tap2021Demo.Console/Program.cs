@@ -6,6 +6,7 @@
         {
             Atm.Instance.Start();
             Atm.Instance.Withdraw(100);
+
         }
     }
 }

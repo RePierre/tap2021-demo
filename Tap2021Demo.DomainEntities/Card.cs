@@ -7,16 +7,16 @@ namespace Tap2021Demo.DomainEntities
         public Card(string cardHolder)
         {
             Holder = cardHolder;
-            Accounts = new List<Account>();
+            Accounts = new List<WithdrawableAccount>();
         }
 
         public string Holder { get; private set; }
 
-        public IEnumerable<Account> Accounts { get; private set; }
+        public IEnumerable<WithdrawableAccount> Accounts { get; private set; }
 
         public void AddAcount(SavingsAccount account)
         {
-            (Accounts as List<Account>).Add(account);
+            (Accounts as List<WithdrawableAccount>).Add(account);
         }
     }
 }
