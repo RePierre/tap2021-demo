@@ -1,14 +1,14 @@
 ﻿namespace Tap2021Demo.DomainEntities
 {
-    public class SavingsAccount : Account
+    public class SavingsAccount : WithdrawableAccount
     {
-        public SavingsAccount(string iban, decimal balance, AccountHolder accountHolder) : base(iban, balance, accountHolder)
+        public SavingsAccount(string iban, decimal balance, AccountHolder accountHolder) : base(iban, balance, accountHolder, null)
         {
         }
 
-        protected override decimal CalculateWithdrawalFee(decimal amount)
+        protected override decimal GetWithdrawalCommissionPercent()
         {
-            return amount * 0.5m / 100m;
+            return 0.5m;
         }
     }
 }
