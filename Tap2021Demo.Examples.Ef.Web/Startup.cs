@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Tap2021Demo.Infrastructure.DataAccess;
 
 namespace Tap2021Demo.Examples.Ef.Web
 {
@@ -19,7 +21,7 @@ namespace Tap2021Demo.Examples.Ef.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddEntityFrameworkSqlServer();
+            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("Tap2021Demo")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
