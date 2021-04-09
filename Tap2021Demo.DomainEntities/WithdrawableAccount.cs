@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 
 namespace Tap2021Demo.DomainEntities
 {
@@ -11,8 +10,6 @@ namespace Tap2021Demo.DomainEntities
 
         protected WithdrawableAccount(string iban, decimal balance, AccountHolder accountHolder, IWithdrawalAmountCalculator withdrawalAmountCalculator) : base(iban, balance, accountHolder)
         {
-            Debug.Assert(withdrawalAmountCalculator != null);
-
             AmountCalculator = withdrawalAmountCalculator;
         }
 

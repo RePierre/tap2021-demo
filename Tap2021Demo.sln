@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tap2021Demo.Console", "Tap2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tap2021Demo.DomainEntities", "Tap2021Demo.DomainEntities\Tap2021Demo.DomainEntities.csproj", "{0DACCD74-2CC0-40D7-87E2-DFFD415ED045}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tap2021Demo.Utilities.DataImport", "Tap2021Demo.Utilities.DataImport\Tap2021Demo.Utilities.DataImport.csproj", "{0CC51B18-B645-4D26-AEE1-6DE9EC4C5680}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tap2021Demo.Utilities.DataImport", "Tap2021Demo.Utilities.DataImport\Tap2021Demo.Utilities.DataImport.csproj", "{0CC51B18-B645-4D26-AEE1-6DE9EC4C5680}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tap2021Demo.Extensions", "Tap2021Demo.Extensions\Tap2021Demo.Extensions.csproj", "{C8E6DB10-9B30-481A-AEFE-C8B6819A96D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{0CC51B18-B645-4D26-AEE1-6DE9EC4C5680}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CC51B18-B645-4D26-AEE1-6DE9EC4C5680}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CC51B18-B645-4D26-AEE1-6DE9EC4C5680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8E6DB10-9B30-481A-AEFE-C8B6819A96D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E6DB10-9B30-481A-AEFE-C8B6819A96D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E6DB10-9B30-481A-AEFE-C8B6819A96D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E6DB10-9B30-481A-AEFE-C8B6819A96D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

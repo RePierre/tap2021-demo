@@ -1,5 +1,6 @@
-﻿using CsvHelper.Configuration.Attributes;
+﻿#define XBOX
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -7,38 +8,25 @@ using Tap2021Demo.DomainEntities;
 
 namespace Tap2021Demo.Utilities.DataImport
 {
-    internal class Importer
+    internal partial class Importer
     {
         private readonly string fileName;
-
-        class DataRecord
-        {
-            [Name("IBAN")]
-            public string Iban { get; set; }
-            [Name("First Name")]
-            public string FirstName { get; set; }
-            [Name("Last Name")]
-            public string LastName { get; set; }
-            [Name("IdNo")]
-            public string IdNo { get; set; }
-            [Name("Balance")]
-            public decimal Balance { get; set; }
-        }
 
         public Importer(string fileName)
         {
             this.fileName = fileName;
         }
 
-        public IEnumerable<IAccount> ImportData()
+
+        public IEnumerable<IAccount> ImportData(string cultureName)
         {
             IEnumerable<DataRecord> data = null;
-            using var stream = new StreamReader(this.fileName);
-            using (var reader = new CsvHelper.CsvReader(stream, new CultureInfo("ro-RO")))
+            var stream = new StreamReader(this.fileName);
+            using (var reader = new CsvHelper.CsvReader(stream, new CultureInfo(cultureName)))
             {
                 data = reader.GetRecords<DataRecord>().ToList();
             }
-
+            RunOnXboxOnly($"In {nameof(ImportData)}.");
             var result = new List<IAccount>();
             foreach (var item in data)
             {
@@ -47,6 +35,12 @@ namespace Tap2021Demo.Utilities.DataImport
                 result.Add(account);
             }
             return result;
+        }
+
+        [Conditional("XBOX")]
+        void RunOnXboxOnly(string message)
+        {
+            System.Console.WriteLine(message);
         }
     }
 }

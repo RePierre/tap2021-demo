@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tap2021Demo.DomainEntities\Tap2021Demo.DomainEntities.csproj" />
+    <ProjectReference Include="..\Tap2021Demo.Extensions\Tap2021Demo.Extensions.csproj" />
   </ItemGroup>
 
 </Project>
