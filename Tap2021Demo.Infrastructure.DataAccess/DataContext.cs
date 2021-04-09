@@ -5,6 +5,11 @@ namespace Tap2021Demo.Infrastructure.DataAccess
 {
     public class DataContext : DbContext, IDataRepository, IUnitOfWork
     {
+        public DataContext(DbContextOptions<DataContext> contextOptions) : base(contextOptions)
+        {
+
+        }
+
         public void Commit()
         {
             SaveChanges();
