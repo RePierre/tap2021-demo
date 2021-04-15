@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Tap2021Demo.DomainEntities;
 
 namespace Tap2021Demo.Console
@@ -29,7 +30,7 @@ namespace Tap2021Demo.Console
         public void Start()
         {
             //Prepare
-            var account = new SavingsAccount(string.Empty, 0m, new AccountHolder(string.Empty, string.Empty, string.Empty));
+            var account = new SavingsAccount(string.Empty, 0m, new AccountHolder(Guid.NewGuid(), string.Empty, string.Empty, string.Empty));
             account.Deposit(200);
             var card = new Card("Andrei Ionut");
             card.AddAcount(account);

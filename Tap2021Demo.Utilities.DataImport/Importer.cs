@@ -1,4 +1,5 @@
 ﻿#define XBOX
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -30,7 +31,7 @@ namespace Tap2021Demo.Utilities.DataImport
             var result = new List<IAccount>();
             foreach (var item in data)
             {
-                var accHolder = new AccountHolder(item.IdNo, item.FirstName, item.LastName);
+                var accHolder = new AccountHolder(Guid.NewGuid(), item.IdNo, item.FirstName, item.LastName);
                 var account = new DebitAccount(item.Iban, item.Balance, accHolder);
                 result.Add(account);
             }
