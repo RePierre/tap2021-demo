@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tap2021Demo.DomainEntities\Tap2021Demo.DomainEntities.csproj" />
+    <ProjectReference Include="..\Tap2021Demo.Infrastructure.DataAccess\Tap2021Demo.Infrastructure.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

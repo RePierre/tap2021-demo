@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Tap2021Demo.Infrastructure.DataAccess;
 
 namespace Tap2021Demo.DomainEntities.Mappings
@@ -8,7 +7,7 @@ namespace Tap2021Demo.DomainEntities.Mappings
     {
         public void ApplyConfiguration(ModelBuilder modelBuilder)
         {
-            throw new NotImplementedException();
+            modelBuilder.ApplyConfiguration(new AccountHolderMapping());
         }
     }
 }
