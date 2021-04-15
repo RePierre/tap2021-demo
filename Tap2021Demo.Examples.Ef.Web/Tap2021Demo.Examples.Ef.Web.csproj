@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Tap2021Demo.DomainEntities\Tap2021Demo.DomainEntities.csproj" />
     <ProjectReference Include="..\Tap2021Demo.Infrastructure.DataAccess\Tap2021Demo.Infrastructure.DataAccess.csproj" />
   </ItemGroup>
 

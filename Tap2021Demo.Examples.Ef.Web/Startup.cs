@@ -22,6 +22,11 @@ namespace Tap2021Demo.Examples.Ef.Web
         {
             services.AddControllersWithViews();
             services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("Tap2021Demo")));
+
+            // Refactor to separate method
+            services.AddTransient<IUnitOfWork, DataContext>();
+            services.AddTransient<IDataRepository, DataContext>();
+            //services.AddTransient<IEntityTypeConfigurationRegistrar>
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
