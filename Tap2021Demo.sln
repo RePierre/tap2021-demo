@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tap2021Demo.Utilities.DataI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tap2021Demo.Extensions", "Tap2021Demo.Extensions\Tap2021Demo.Extensions.csproj", "{C8E6DB10-9B30-481A-AEFE-C8B6819A96D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tap2021Demo.Examples.Ef.Web", "Tap2021Demo.Examples.Ef.Web\Tap2021Demo.Examples.Ef.Web.csproj", "{2F32425E-DCB0-4738-938D-05F292B46426}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tap2021Demo.Examples.Ef.Web", "Tap2021Demo.Examples.Ef.Web\Tap2021Demo.Examples.Ef.Web.csproj", "{2F32425E-DCB0-4738-938D-05F292B46426}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tap2021Demo.Infrastructure.DataAccess", "Tap2021Demo.Infrastructure.DataAccess\Tap2021Demo.Infrastructure.DataAccess.csproj", "{FD5832FD-8F04-4D0D-9918-4630505055C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tap2021Demo.DomainEntities.Mappings", "Tap2021Demo.DomainEntities.Mappings\Tap2021Demo.DomainEntities.Mappings.csproj", "{705ECADB-3112-43FE-A0DF-7FD57A982126}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tap2021Demo.DomainEntities.Tests", "Tap2021Demo.DomainEntities.Tests\Tap2021Demo.DomainEntities.Tests.csproj", "{C87C19AC-6EB2-4BC1-AE59-4920404C901A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{2F32425E-DCB0-4738-938D-05F292B46426}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F32425E-DCB0-4738-938D-05F292B46426}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F32425E-DCB0-4738-938D-05F292B46426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD5832FD-8F04-4D0D-9918-4630505055C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD5832FD-8F04-4D0D-9918-4630505055C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD5832FD-8F04-4D0D-9918-4630505055C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD5832FD-8F04-4D0D-9918-4630505055C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{705ECADB-3112-43FE-A0DF-7FD57A982126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{705ECADB-3112-43FE-A0DF-7FD57A982126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{705ECADB-3112-43FE-A0DF-7FD57A982126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{705ECADB-3112-43FE-A0DF-7FD57A982126}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C87C19AC-6EB2-4BC1-AE59-4920404C901A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C87C19AC-6EB2-4BC1-AE59-4920404C901A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C87C19AC-6EB2-4BC1-AE59-4920404C901A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C87C19AC-6EB2-4BC1-AE59-4920404C901A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
