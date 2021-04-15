@@ -1,5 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Linq;
+﻿using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Tap2021Demo.Infrastructure.DataAccess
 {
@@ -33,6 +34,14 @@ namespace Tap2021Demo.Infrastructure.DataAccess
         void IDataRepository.Update<TEntity>(TEntity entity)
         {
             Update(entity);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            var registrar = this.GetService<IEntityTypeConfigurationRegistrar>();
+            registrar.ApplyConfiguration(modelBuilder);
         }
     }
 }
