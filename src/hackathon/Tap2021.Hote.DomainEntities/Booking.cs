@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tap2021.Hote.DomainEntities
+namespace Tap2021.Hotel.DomainEntities
 {
     public class Booking
     {
