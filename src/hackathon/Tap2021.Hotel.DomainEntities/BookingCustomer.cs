@@ -4,6 +4,11 @@ namespace Tap2021.Hotel.DomainEntities
 {
     public class BookingCustomer
     {
+        public BookingCustomer()
+        {
+            Id = Guid.NewGuid();
+        }
+
         public Guid Id { get; set; }
 
         public int BookingNumber { get; set; }

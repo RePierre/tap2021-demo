@@ -6,7 +6,7 @@ namespace Tap2021.Hotel.DomainEntities
 {
     public class Room
     {
-        public int RoomNumber { get; set; }
+        public int Number { get; set; }
 
         public RoomType RoomType { get; set; }
 

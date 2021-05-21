@@ -6,6 +6,11 @@ namespace Tap2021.Hotel.DomainEntities
 {
     public class Customer
     {
+        public Customer()
+        {
+            Id = Guid.NewGuid();
+        }
+
         public Guid Id { get; set; }
 
         // CNP
