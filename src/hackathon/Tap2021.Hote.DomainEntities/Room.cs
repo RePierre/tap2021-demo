@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Tap2021.Hote.DomainEntities
+{
+    public class Room
+    {
+        public int RoomNumber { get; set; }
+
+        public RoomType RoomType { get; set; }
+
+        public bool HasPrivateBathroom { get; set; }
+    }
+}
