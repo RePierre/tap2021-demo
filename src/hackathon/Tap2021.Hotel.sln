@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tap2021.Hotel.Infrastructur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tap2021.Hotel.DomainEntities", "Tap2021.Hotel.DomainEntities\Tap2021.Hotel.DomainEntities.csproj", "{75040794-0D6E-48D1-B831-4594782D78FF}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Tap2021.Hotel.Database", "Tap2021.Hotel.Database\Tap2021.Hotel.Database.sqlproj", "{0558322D-1C3E-4FF9-A0BF-6A95B8F1817B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{75040794-0D6E-48D1-B831-4594782D78FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75040794-0D6E-48D1-B831-4594782D78FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75040794-0D6E-48D1-B831-4594782D78FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0558322D-1C3E-4FF9-A0BF-6A95B8F1817B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0558322D-1C3E-4FF9-A0BF-6A95B8F1817B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0558322D-1C3E-4FF9-A0BF-6A95B8F1817B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0558322D-1C3E-4FF9-A0BF-6A95B8F1817B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0558322D-1C3E-4FF9-A0BF-6A95B8F1817B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0558322D-1C3E-4FF9-A0BF-6A95B8F1817B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
